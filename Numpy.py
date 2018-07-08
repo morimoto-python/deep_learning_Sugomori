@@ -31,10 +31,51 @@ print(c+d)
 print(5*c)
 print(c*d) #行列の要素積
 
-#数学でいう行列の積はk*l行列とm*n行列においてl=mのときのみ可能なので、今回の例の場合はc行列を3*2転換する必要がある
+#　数学でいう行列の積はk*l行列とm*n行列においてl=mのときのみ可能なので、今回の例の場合はc行列を3*2転換する必要がある
 C= c.T
 print(C)
 print(np.dot(C,d)) #行列の積
+
+#配列・多次元配列の生成
+print("\n")
+print(np.zeros(5)) #全て0のベクトル
+print(np.ones(7)) #全て1のベクトル
+
+#　np.arange(start, end, step)
+print(np.arange(5)) #範囲指定
+print(np.arange(4,9))
+
+#reshapeで行列（多次元配列）を作成
+print(np.zeros(8).reshape(2,4))
+
+#正方行列
+print(np.identity(5))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
