@@ -53,15 +53,13 @@ print("bの予測値：{}".format(b))
 plt.scatter(x1[:,0], x1[:,1])
 plt.scatter(x2[:,0], x2[:,1])
 
-plt.figure()
-
-X= np.linspace(-3,6,100)
+X= np.linspace(-3,6,10)
 Y= []
 for i in X:
-    Y.append((-w[1]/w[0])*i + b/w[0])
+    Y.append((-w[0]/w[1])*i - b/w[1])
  
 plt.plot(X,Y)
-plt.scatter(x[:,0],x[:,1])
+plt.scatter(x[:,0], x[:,1])
 plt.show()
         
         
