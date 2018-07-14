@@ -9,10 +9,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-rng= np.random.RandomState(123)
+rng= np.random.RandomState(13)
 
 d = 2 #データの次元
-N = 10 #各パターンのデータ数
+N = 100 #各パターンのデータ数
 mean = -5 #ニューロンが発火するデータの平均値
 
 x1 = rng.randn(N, d) + np.array([0, 0])
@@ -44,13 +44,14 @@ while True:
         delta_b= (t(i) - y(x[i]))
         w += delta_w
         b += delta_b
-        classified *= all(delta_w == 0)*(delta_b == 0) #all(int):全ての要素がTrueの時にTrueを返す
+        classified *= all((delta_w == 0)*(delta_b == 0)) #all(int):全ての要素がTrueの時にTrueを返す
     if classified:
         break
 print("wの予測値：{}".format(w))
 print("bの予測値：{}".format(b))
 
-print(x)
+plt.scatter(x1[:,0],x1[:,1])
+plt.scatter(x2[:,0],x2[:,1])
 
 X= np.linspace(-7,3,100)
 Y= []
