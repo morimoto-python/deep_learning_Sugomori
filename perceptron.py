@@ -50,14 +50,16 @@ while True:
 print("wの予測値：{}".format(w))
 print("bの予測値：{}".format(b))
 
-plt.scatter(x1[:,0], x1[:,1])
+
+#本文に作図の方法は書いていないので、matplotlibで自作
+plt.scatter(x1[:,0], x1[:,1], c= "red",marker= ",")
 plt.scatter(x2[:,0], x2[:,1])
 
 X= np.linspace(-3,6,10)
 Y= []
 for i in X:
     Y.append((-w[0]/w[1])*i - b/w[1])
- 
+
 plt.plot(X,Y)
 plt.scatter(x[:,0], x[:,1])
 plt.show()
