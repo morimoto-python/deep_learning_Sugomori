@@ -55,7 +55,7 @@ print("bの予測値：{}".format(b))
 plt.scatter(x1[:,0], x1[:,1], c= "red",marker= ",")
 plt.scatter(x2[:,0], x2[:,1])
 
-X= np.linspace(-3,6,10)
+X= np.linspace(min(x[:,0]), max(x[:,1]) ,10)
 Y= []
 for i in X:
     Y.append((-w[0]/w[1])*i - b/w[1])
